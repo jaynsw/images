@@ -13,10 +13,5 @@ COPY config/php-fpm.conf /etc/php7/php-fpm.conf
 COPY config/php.ini /etc/php7/conf.d/php.ini
 
 
-# wp-content volume
-VOLUME /home/www
-WORKDIR /home/www
-#RUN chown -R nobody.nobody /home/www
-
 CMD ["php-fpm7", "-F", "-R"]
 
